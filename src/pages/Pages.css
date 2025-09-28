@@ -1,0 +1,96 @@
+.page-container {
+    max-width: 600px;
+    margin: 100px auto 40px;
+    padding: 20px;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.page-container h1,
+.page-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.page-container h1 {
+    color: var(--primary-color);
+    margin-bottom: 16px;
+
+    /* Application title */
+    &.app-title::before {
+        content: 'MoodSync';
+        display: block;
+        font-size: 2rem;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+}
+
+.page-container textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.page-container button {
+    background: var(--primary-color);
+    color: var(--card-text);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.page-container button:disabled {
+    background: var(--secondary-color);
+    cursor: not-allowed;
+}
+
+.song-list {
+    list-style: none;
+    padding: 0;
+}
+
+.song-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.song-list img {
+    width: 64px;
+    height: 64px;
+    margin-right: 12px;
+    border-radius: 4px;
+}
+
+.song-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .page-container {
+        margin: 60px auto 20px;
+        padding: 16px;
+        width: 90%;
+    }
+
+    .page-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-container textarea {
+        font-size: 14px;
+    }
+
+    .page-container button {
+        width: 100%;
+        padding: 12px;
+    }
+}
